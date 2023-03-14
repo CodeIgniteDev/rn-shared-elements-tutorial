@@ -19,7 +19,7 @@ const animationOut = {
   1: { translateX: -40, opacity: 0 },
 }
 
-const PhotosScreen = ({ route }) => {
+const DetailsScreen = ({ route }) => {
   const participantsRef = useRef([])
 
   const { item } = route.params
@@ -84,7 +84,7 @@ const PhotosScreen = ({ route }) => {
   )
 }
 
-PhotosScreen.sharedElements = (route) => {
+DetailsScreen.sharedElements = (route) => {
   const { item } = route.params
 
   const participants = item.participants.map((participant) => ({
@@ -105,7 +105,7 @@ PhotosScreen.sharedElements = (route) => {
   ]
 }
 
-export default PhotosScreen
+export default DetailsScreen
 
 const styles = StyleSheet.create({
   backgroundImage: {
